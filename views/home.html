@@ -22,6 +22,7 @@
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
+                <span class="err" id="err-email">Email is required</span>
             </fieldset>
 
             <fieldset>
@@ -36,6 +37,7 @@
                     <option value="caramel">Caramel</option>
                     <option value="mint-with-chocolate-chip">Mint with chocolate chip</option>
                 </select>
+                <span class="err" id="err-flavor">Please select a flavor</span>
 
                 <p>Choose your cone:</p>
                 <label for="waffle-cone">
@@ -52,6 +54,7 @@
                     <input type="radio" id="cup" name="cone" value="cup">
                     Cup
                 </label>
+                <span class="err" id="err-cone">Please select a cone type</span>
 
                 <p>Toppings:</p>
                 <label for="sprinkles">
