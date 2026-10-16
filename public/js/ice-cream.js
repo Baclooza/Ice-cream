@@ -29,11 +29,12 @@ document.getElementById("ice-cream-form").onsubmit = () => {
   // Validate cone
   let coneSelected = false;
   let coneButtons = document.getElementsByName("cone");
-  for (let i=0; i<coneButtons.length; i++){
+  for (let i = 0; i < coneButtons.length; i++){
     if (coneButtons[i].checked){
       coneSelected = true;
     }
   }
+
   if (!coneSelected){
     document.getElementById("err-cone").style.display = "block";
     isValid = false;
