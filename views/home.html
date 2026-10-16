@@ -11,7 +11,7 @@
 <body>
     <div id="main">
         <h1>Ice Cream Order Form</h1>
-        <form id="ice-cream-form" action="#" method="get">
+        <form id="ice-cream-form" action="#" method="get" novalidate>
 
             <fieldset id="personal-info">
                 <legend>Personal Information</legend>
@@ -22,7 +22,8 @@
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
-                <span class="err" id="err-email">Email is required</span>
+                <span class="err" id="err-email-empty">Email is required</span>
+                <span class="err" id="err-email-format">Email address should contain '@' symbol</span>
             </fieldset>
 
             <fieldset>

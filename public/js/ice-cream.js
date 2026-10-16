@@ -13,10 +13,22 @@ document.getElementById("ice-cream-form").onsubmit = () => {
   }
 
   // Validate email
+  let isEmailValid = false;
   let email = document.getElementById("email").value.trim();
   if (email == "") {
-    document.getElementById("err-email").style.display = "block";
+    document.getElementById("err-email-empty").style.display = "block";
     isValid = false;
+  } else {
+    for (let i = 0; i < email.length; i++) {
+      if (email[i] == '@') {
+        isEmailValid = true;
+      }
+    }
+
+    if (!isEmailValid) {
+      document.getElementById("err-email-format").style.display = "block";
+      isValid = false;
+    }
   }
 
   // Validate flavor
